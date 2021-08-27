@@ -1,0 +1,16 @@
+C:\Users\lucas\Documents\GitHub\MSAcademy\obj\Debug\net5.0\MSAcademy.csproj.AssemblyReference.cache
+C:\Users\lucas\Documents\GitHub\MSAcademy\obj\Debug\net5.0\MSAcademy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\Documents\GitHub\MSAcademy\obj\Debug\net5.0\MSAcademy.AssemblyInfoInputs.cache
+C:\Users\lucas\Documents\GitHub\MSAcademy\obj\Debug\net5.0\MSAcademy.AssemblyInfo.cs
+C:\Users\lucas\Documents\GitHub\MSAcademy\obj\Debug\net5.0\MSAcademy.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub\MSAcademy\bin\Debug\net5.0\MSAcademy.exe
+C:\Users\lucas\Documents\GitHub\MSAcademy\bin\Debug\net5.0\MSAcademy.deps.json
+C:\Users\lucas\Documents\GitHub\MSAcademy\bin\Debug\net5.0\MSAcademy.runtimeconfig.json
+C:\Users\lucas\Documents\GitHub\MSAcademy\bin\Debug\net5.0\MSAcademy.runtimeconfig.dev.json
+C:\Users\lucas\Documents\GitHub\MSAcademy\bin\Debug\net5.0\MSAcademy.dll
+C:\Users\lucas\Documents\GitHub\MSAcademy\bin\Debug\net5.0\ref\MSAcademy.dll
+C:\Users\lucas\Documents\GitHub\MSAcademy\bin\Debug\net5.0\MSAcademy.pdb
+C:\Users\lucas\Documents\GitHub\MSAcademy\obj\Debug\net5.0\MSAcademy.dll
+C:\Users\lucas\Documents\GitHub\MSAcademy\obj\Debug\net5.0\ref\MSAcademy.dll
+C:\Users\lucas\Documents\GitHub\MSAcademy\obj\Debug\net5.0\MSAcademy.pdb
+C:\Users\lucas\Documents\GitHub\MSAcademy\obj\Debug\net5.0\MSAcademy.genruntimeconfig.cache
