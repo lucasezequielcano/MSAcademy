@@ -3,12 +3,14 @@
 using MSAcademy.Math;
 namespace MSAcademy
 {
-    public class Person{
-        public int age; 
+    public class Person
+    {
+        public int age;
     }
-    public enum ShippingMethod{
-        RegularAirMail = 1, 
-        RegisteredAirMail = 2, 
+    public enum ShippingMethod
+    {
+        RegularAirMail = 1,
+        RegisteredAirMail = 2,
         Express = 3
     }
 
@@ -40,7 +42,7 @@ namespace MSAcademy
             //-----------------------------//
 
             const float Pi= 3.14f; */
-        
+
             /// > > > D E M O :  T Y P E  C O N V E R S I O N < < < 
 
             /*
@@ -173,7 +175,6 @@ c:\folder3\folder4";
             var array2 = array1; 
             array2[0] = 0; 
             System.Console.WriteLine(string.Format("array1[0]: {0}, array2[0]: {1}", array1[0], array2[0]));
-            */
             int number = 1; 
             increment(number); 
             System.Console.WriteLine(number);
@@ -187,6 +188,93 @@ c:\folder3\folder4";
         }
         public static void makeOld (Person person){
             person.age += 10; 
+        }
+            */
+            /////////////////////////////////////////////////
+            ///> > > P u n t o  1 < < <///
+            byte number;
+            System.Console.WriteLine("Ingrese un numero: ");
+            number = Convert.ToByte(System.Console.ReadLine());
+
+            if (number < 11)
+            {
+                System.Console.WriteLine("Valid");
+            }
+            else
+            {
+                System.Console.WriteLine("Invalid");
+            }
+
+            ///////////////////////////////////////////////////
+            ///> > > P u n t o  2 < < <///
+            int a, b;
+            System.Console.WriteLine("Ingrese el primer numero: ");
+            a = Convert.ToInt32(System.Console.ReadLine());
+
+            System.Console.WriteLine("Ingrese el segundo numero: ");
+            b = Convert.ToInt32(System.Console.ReadLine());
+
+            if (a > b)
+            {
+                System.Console.WriteLine("El número " + a + " es el mayor entre los dos.");
+            }
+            else if (b > a)
+            {
+                System.Console.WriteLine("El número " + b + " es el mayor entre los dos.");
+            }
+            else
+            {
+                System.Console.WriteLine("Ambos números ingresados son iguales.");
+            }
+
+            ////////////////////////////////////////////////////////
+            ///> > > P u n t o  3 < < <///
+
+            float height, width;
+            System.Console.WriteLine("Ingrese el ancho: ");
+            width = Convert.ToSingle(System.Console.ReadLine());
+            System.Console.WriteLine("Ingrese el alto: ");
+            height = Convert.ToSingle(System.Console.ReadLine());
+
+            if (width > height)
+            {
+                System.Console.WriteLine("The image is a landscape");
+            }
+            else
+            {
+                System.Console.WriteLine("The image is a portrait");
+            }
+
+            ////////////////////////////////////////////////////////
+
+            int demeritPoints=0; 
+            float speedLimit, carSpeed; 
+            System.Console.WriteLine("Please enter the speed limit: ");
+            speedLimit = Convert.ToSingle(System.Console.ReadLine());
+            for(int i = 0; i<5; i++){
+                 System.Console.WriteLine(".\n");
+             }
+            System.Console.WriteLine("Please enter the speed of the car: ");
+            carSpeed = Convert.ToSingle(System.Console.ReadLine());
+            if(carSpeed < speedLimit)
+            {
+                System.Console.WriteLine("Ok.");
+            }
+            else
+            {
+                while(carSpeed-5>=speedLimit){
+                    demeritPoints++;
+                    carSpeed -= 5;  
+                }
+            }
+            if(demeritPoints<=12){
+                System.Console.WriteLine("You have "+demeritPoints+" demerit points");
+
+            }
+            else
+            {
+                System.Console.WriteLine("You have "+demeritPoints+" demerit points. Licence Suspended.");
+            }
         }
     }
 }
