@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 using MSAcademy.Math;
 namespace MSAcademy
 {
@@ -189,7 +189,6 @@ c:\folder3\folder4";
         public static void makeOld (Person person){
             person.age += 10; 
         }
-            */
             /////////////////////////////////////////////////
             ///> > > P u n t o  1 < < <///
             byte number;
@@ -246,6 +245,7 @@ c:\folder3\folder4";
             }
 
             ////////////////////////////////////////////////////////
+            ///> > > P u n t o  4 < < <///
 
             int demeritPoints=0; 
             float speedLimit, carSpeed; 
@@ -275,6 +275,166 @@ c:\folder3\folder4";
             {
                 System.Console.WriteLine("You have "+demeritPoints+" demerit points. Licence Suspended.");
             }
+
+            ////////////////////////////////////////////////////////
+            /// > > > D E M O :  A R R A Y S  < < < 
+
+            var numbers = new int[] { 3, 7, 9, 2, 14, 6 };
+            // Length
+            System.Console.WriteLine("Length: " + numbers.Length);
+            // IndexOf()
+            var index = Array.IndexOf(numbers, 9);
+            System.Console.WriteLine("Index of 9: " + index);
+            // Clear() --> set to 0
+            Array.Clear(numbers, 0, 2);
+            foreach (var n in numbers)
+            {
+                System.Console.WriteLine(n);
+            }
+            //Copy
+            int[] another = new int[3];
+            Array.Copy(numbers, another, 3);
+            System.Console.WriteLine("Effect of Copy(): ");
+            foreach (var m in another)
+                System.Console.WriteLine(m);
+
+            // Sort()
+            Array.Sort(numbers); 
+            System.Console.WriteLine("Effect of Sort(): ");
+            foreach(var ñ in numbers)
+                System.Console.WriteLine(ñ);
+
+            // Reverse()
+            Array.Reverse(numbers); 
+            System.Console.WriteLine("Effect of Reverse(): ");
+            foreach(var n in numbers)
+                System.Console.WriteLine(n);
+            var numbers = new List<int>(){1, 2, 3, 4}; 
+            numbers.Add(1); 
+            numbers.AddRange(new int[3]{5, 6, 7}); 
+            foreach(var number in numbers)
+                System.Console.WriteLine(number);
+            System.Console.WriteLine("Index of 1: " +numbers.IndexOf(1));
+            System.Console.WriteLine("Last Index of 1: " +numbers.LastIndexOf(1));
+            System.Console.WriteLine("Count: "+numbers.Count);
+            numbers.Remove(1); 
+
+            for(var i = 0; i < numbers.Count; i++)
+            {
+                if(numbers[i] == 1)
+                    numbers.Remove(numbers[i]); 
+
+            }           
+            foreach(var number in numbers)
+                System.Console.WriteLine(number);
+
+            numbers.Clear(); 
+             ////////////////////////////////////////////////////////
+            /// > > > E X E R C I S E :  A R R A Y S  < < < 
+            //2.
+            string name, reversedName; 
+            System.Console.WriteLine("Enter your name: ");
+            name = System.Console.ReadLine(); 
+            char[] cArray = name.ToCharArray();
+            Array.Reverse(cArray);  
+            reversedName = new string (cArray); 
+            System.Console.WriteLine("Name: " + name);
+            System.Console.WriteLine("Reversed Name: " + reversedName);
+
+            //3.
+            List<int> iList = new List<int>(); 
+            int i = 0; 
+            while(i<5)
+            {
+              int number; 
+              System.Console.WriteLine("Enter a number: ");
+              number = Convert.ToInt32(System.Console.ReadLine()); 
+              if(iList.Exists(elem => elem == number))
+              {
+                System.Console.WriteLine("The number is repeated. Please enter a new number.");  
+              }  
+              else
+              {
+                iList.Add(number); 
+                i++; 
+              }
+            }
+            iList.Sort(); 
+            System.Console.WriteLine("///////////////");
+            foreach(int elem in iList)
+            {
+                System.Console.WriteLine(elem);
+            }
+            var jList = new List<int>(); 
+            while(true)
+            {
+                System.Console.WriteLine("Enter a number or quite to exit");
+                var quit = Console.ReadLine(); 
+
+                if(quit.CompareTo("quit") == 0)
+                    break; 
+                else
+                {
+                    var number = Convert.ToInt32(quit); 
+                    if(jList.Contains(number))
+                        continue; 
+                    else
+                        jList.Add(number); 
+                }
+            }
+            foreach(var a in jList)
+                System.Console.WriteLine(a);
+            var list = new List<int>(); 
+            while(true)
+            {
+                System.Console.WriteLine("Write a list of numbers: ");
+                var input = Console.ReadLine(); 
+                var array = input.Split(','); 
+                if((array.Length == 0) || (array.Length < 5))
+                {
+                    System.Console.WriteLine("Invalid list. Try again.");
+                }
+                else
+                {
+                    foreach(var arrayNumber in array)
+                        list.Add(Convert.ToInt32(arrayNumber)); 
+                        break; 
+                }
+            }
+            list.Sort(); 
+        
+            foreach(var a in list)
+                System.Console.WriteLine(a);        
+            */
+
+            //1.
+            List<string> names = new List<string>();
+            int quantity = 0; 
+            char c  = 's'; 
+            while(c != 'n')
+            {
+                System.Console.WriteLine("Enter a name: ");
+                var name = Console.ReadLine(); 
+                names.Add(name); 
+                System.Console.WriteLine("Do you want to continue? s/n");
+                c = Convert.ToChar(Console.ReadLine()); 
+            }
+            quantity = names.Count;
+            if(quantity == 0)
+            {
+                System.Console.WriteLine("---");
+            } else if(quantity == 1)
+            {
+                System.Console.WriteLine(names[0]+" likes yout post");
+            }else if(quantity == 2)
+            {
+                 System.Console.WriteLine(names[0]+" and "+names[1]+ " likes yout post");
+            }else 
+            {
+                System.Console.WriteLine(names[0]+" and "+names[1] +" and "+ (quantity-2) +" others likes yout post");
+            }
+            
+
         }
     }
 }
